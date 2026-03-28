@@ -1,150 +1,242 @@
+:root {
+  --primary: #7d1730;
+  --primary-dark: #5e1024;
+  --accent: #f3c96a;
+  --bg: #f7f4f1;
+  --surface: #ffffff;
+  --text: #1f1f1f;
+  --text-light: #5b5b5b;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --radius: 18px;
+  --max-width: 1100px;
+}
+
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #f8fafc;   /* plus clair */
-  color: #334155;
-  line-height: 1.65;
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  text-align: center;
 }
 
 /* HERO */
-/* Desktop (par défaut) */
 .hero {
-  height: 380px;
-  background-image: url("../images/hero.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: bottom center; /* montre le bas sur desktop */
-  position: relative;
-}
-
-/* Tablette */
-@media (max-width: 921px) {
-  .hero {
-    height: 320px;
-    background-position: center 85%; /* un peu moins bas, souvent mieux */
-  }
-}
-
-/* Mobile */
-@media (max-width: 544px) {
-  .hero {
-    height: 260px;
-    background-position: center 92%; /* favorise encore le bas */
-  }
-
-  .hero h1 {
-    font-size: 1.9rem;
-  }
-
-  .hero p {
-    font-size: 1rem;
-  }
+  min-height: 78vh;
+  background:
+    linear-gradient(rgba(40, 10, 20, 0.45), rgba(40, 10, 20, 0.55)),
+    url("../images/hero.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-overlay {
-  background: linear-gradient(
-    to bottom,
-    rgba(15, 23, 42, 0.40),
-    rgba(15, 23, 42, 0.18)
-  );
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff;
+  width: 100%;
+  padding: 3rem 1.5rem;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
   text-align: center;
-  padding: 20px;
+  color: #fff;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+  margin: 0 0 1rem;
+  line-height: 1.05;
+}
+
+.hero-text {
+  font-size: clamp(1.1rem, 2vw, 1.35rem);
+  max-width: 650px;
+  margin: 0 auto 2rem;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* CONTENU */
 .container {
-  max-width: 900px;
-  margin: 40px auto 60px;
-  padding: 0 20px;
+  width: min(92%, var(--max-width));
+  margin: -70px auto 0;
+  position: relative;
+  z-index: 2;
 }
 
-.card {
-  background: #ffffff;
-  padding: 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.06);
-  border-left: 6px solid #fb8307; /* touche chaleureuse */
+.card,
+.cta {
+  background: var(--surface);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
-.card h2 {
-  margin-bottom: 15px;
-  color: #1e293b;
+.card h2,
+.cta h2 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: var(--primary);
 }
 
-.card ul {
-  padding-left: 20px;
+.card p {
+  margin-bottom: 1rem;
 }
 
-.card li {
-  margin-bottom: 8px;
+.details-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.detail-box {
+  background: #faf7f4;
+  border: 1px solid #eee3dc;
+  border-radius: 14px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.detail-label {
+  display: block;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-light);
+  margin-bottom: 0.35rem;
+}
+
+.detail-value {
+  display: block;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
 }
 
 /* CTA */
 .cta {
-  background: #fff7ed;           /* orange très pâle */
-  color: #1e293b;
-  padding: 40px;
   text-align: center;
-  border-radius: 12px;
-  border: 2px solid rgba(251, 131, 7, 0.45);
+  background: linear-gradient(135deg, #fff 0%, #f9f2ee 100%);
 }
 
-.cta h2 {
-  margin-bottom: 10px;
-  color: #1e293b;
+.cta p {
+  margin-bottom: 1.5rem;
+  color: var(--text-light);
 }
 
-.cta h2 {
-  margin-bottom: 10px;
-}
-
+/* LIENS ET BOUTONS */
 .button {
   display: inline-block;
-  margin-top: 15px;
-  padding: 14px 28px;
-  background: #fb8307;
-  color: #000;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
   text-decoration: none;
-  font-weight: 600;
+  padding: 0.95rem 1.6rem;
   border-radius: 999px;
+  font-weight: 700;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 20px rgba(125, 23, 48, 0.22);
 }
 
 .button:hover {
-  transform: translateY(-1px);
-  opacity: 0.95;
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+.hero-button {
+  font-size: 1rem;
+}
+
+.link {
+  color: var(--primary);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
-  padding: 20px;
-  color: #64748b;
-  font-size: 0.9rem;
+  padding: 2rem 1rem 2.5rem;
+  color: var(--text-light);
+  font-size: 0.95rem;
 }
 
-.link {
-  color: #0f172a;
-  font-weight: 600;
-  text-decoration: underline;
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    min-height: 68vh;
+  }
+
+  .container {
+    margin-top: -40px;
+  }
+
+  .card,
+  .cta {
+    padding: 1.4rem;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
 }
 
-.link:hover {
-  color: #fb8307;
+.fixed-sponsors-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  width: calc(100% - 30px);
+  max-width: 520px;
+  text-align: center;
 }
+
+.fixed-sponsors-button {
+  display: block;
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 700;
+  box-shadow: 0 12px 30px rgba(125, 23, 48, 0.28);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.fixed-sponsors-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+/* Pour éviter que la bannière cache le bas de la page */
+body {
+  padding-bottom: 100px;
+}
+

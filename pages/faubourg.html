@@ -5,18 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Le Faubourg — Cours pour la vie</title>
 
-  <meta name="description" content="Le Faubourg est un organisme communautaire spécialisé en prévention du suicide dans les Laurentides depuis 1993." />
+  <meta
+    name="description"
+    content="Le Faubourg est un organisme communautaire spécialisé en prévention du suicide dans les Laurentides depuis 1993."
+  />
 
-  <!-- Chemin CSS IMPORTANT (on remonte d’un dossier) -->
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 <body>
 
   <!-- HERO -->
-  <header class="hero" style="background: #0f172a;">
+  <header class="hero">
     <div class="hero-overlay">
-      <h1>Le Faubourg</h1>
-      <p>Prévention du suicide et soutien communautaire</p>
+      <div class="hero-content">
+        <p class="eyebrow">Organisme soutenu</p>
+        <h1>Le Faubourg</h1>
+        <p class="hero-text">
+          Prévention du suicide et soutien communautaire dans les Laurentides.
+        </p>
+        <a
+          href="https://cps-le-faubourg.org"
+          class="button hero-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visiter le site du Faubourg
+        </a>
+      </div>
     </div>
   </header>
 
@@ -24,72 +39,91 @@
   <main class="container">
 
     <!-- LOGO -->
-    <section class="card" style="text-align:center;">
+    <section class="card" style="text-align: center;">
       <img
         src="../images/1.jpg"
         alt="Logo du Faubourg"
-        style="max-width:220px; margin-bottom:20px;"
+        style="max-width: 220px; width: 100%; margin-bottom: 10px;"
       />
     </section>
 
-    <!-- TEXTE -->
+    <!-- À PROPOS -->
     <section class="card">
+      <h2>À propos</h2>
       <p>
-        Le <strong>Faubourg</strong> est, depuis 1993, un organisme communautaire qui est spécialisé
-        dans la prévention du suicide et de ses impacts. Le territoire desservi regroupe l’ensemble
-        des Laurentides de Blainville jusqu’à Mont-Laurier.
+        Le <strong>Faubourg</strong> est, depuis 1993, un organisme communautaire spécialisé
+        dans la prévention du suicide et de ses impacts.
       </p>
-
       <p>
-        La plupart de leurs interventions sont initiées suite aux demandes d’aide de personnes
-        suicidaires qui nécessitent une aide immédiate. Les intervenants du Faubourg sont en mesure
-        d’intervenir rapidement grâce à leur ligne téléphonique accessible 24/7.
-      </p>
-
-      <p>
-        L’organisme peut également aider les proches d’une personne suicidaire, pouvant ainsi leur
-        donner des outils afin d’éviter une tragédie. Les personnes endeuillées à la suite d’un
-        suicide dans leur entourage peuvent également obtenir des services avec les intervenants
-        du Faubourg.
-      </p>
-
-      <p>
-        En 2025, le Faubourg a répondu à plus de <strong>7 000 appels</strong> provenant du territoire
-        des Laurentides. Malgré ce nombre important, l’organisme estime avoir manqué environ
-        <strong>5 % des appels</strong> en raison du nombre limité d’intervenants.
+        Le territoire desservi regroupe l’ensemble des Laurentides, de Blainville jusqu’à Mont-Laurier.
       </p>
     </section>
 
-    <!-- URGENCE / CONTACT -->
-    <section class="cta">
-      <h2>Besoin d’aide? Appelez le Faubourg</h2>
-      <p style="margin-top:10px;">
-        <strong>Ligne de réponse 24/24</strong>
+    <!-- SERVICES -->
+    <section class="card">
+      <h2>Intervention et soutien</h2>
+      <p>
+        La plupart des interventions sont initiées à la suite de demandes d’aide de personnes
+        suicidaires ayant besoin d’un soutien immédiat.
       </p>
       <p>
-        <a href="tel:18662773553" style="color:#000000; font-weight:600;">
-          1 866 APPELLE (277-3553)
-        </a>
-        <br />
-        <a href="tel:4505690101" style="color:#000000; font-weight:600;">
-          450-569-0101
-        </a>
+        Les intervenants du Faubourg sont en mesure d’agir rapidement grâce à leur ligne téléphonique
+        accessible <strong>24 heures sur 24, 7 jours sur 7</strong>.
       </p>
+      <p>
+        L’organisme accompagne également les proches d’une personne suicidaire en leur donnant
+        des outils concrets pour prévenir une tragédie.
+      </p>
+      <p>
+        Les personnes endeuillées à la suite d’un suicide dans leur entourage peuvent aussi obtenir
+        des services auprès des intervenants du Faubourg.
+      </p>
+    </section>
 
-      <p style="margin-top:20px;">
-        <a
-          href="https://cps-le-faubourg.org"
-          class="button"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Visiter le site du Faubourg
-        </a>
+    <!-- IMPACT -->
+    <section class="card details-card">
+      <h2>Impact</h2>
+      <div class="details-grid">
+        <div class="detail-box">
+          <span class="detail-label">Depuis</span>
+          <span class="detail-value">1993</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Territoire</span>
+          <span class="detail-value">Laurentides</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Appels en 2025</span>
+          <span class="detail-value">Plus de 7 000</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Disponibilité</span>
+          <span class="detail-value">24/7</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- AIDE -->
+    <section class="cta">
+      <h2>Besoin d’aide&nbsp;?</h2>
+      <p><strong>Ligne de réponse 24/24</strong></p>
+      <p>
+        <a href="tel:18662773553" class="link">1 866 APPELLE (277-3553)</a>
+        <br />
+        <a href="tel:4505690101" class="link">450-569-0101</a>
       </p>
+      <a
+        href="https://cps-le-faubourg.org"
+        class="button"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Obtenir de l’aide
+      </a>
     </section>
 
     <!-- RETOUR -->
-    <section style="text-align:center; margin-top:30px;">
+    <section class="card" style="text-align: center;">
       <a href="../index.html" class="link">
         ← Retour à Cours pour la vie
       </a>

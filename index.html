@@ -5,7 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cours pour la vie</title>
 
-  <meta name="description" content="Cours pour la vie — Un événement rassembleur pour promouvoir la santé, la solidarité et l’espoir." />
+  <meta
+    name="description"
+    content="Cours pour la vie — Un événement rassembleur pour promouvoir la santé, la solidarité et l’espoir."
+  />
 
   <link rel="stylesheet" href="css/style.css" />
 </head>
@@ -14,8 +17,21 @@
   <!-- HERO -->
   <header class="hero">
     <div class="hero-overlay">
-      <h1>Cours pour la vie</h1>
-      <p>Un pas à la fois, pour aujourd’hui et pour demain.</p>
+      <div class="hero-content">
+        <p class="eyebrow">Événement communautaire</p>
+        <h1>Cours pour la vie</h1>
+        <p class="hero-text">
+          Un pas à la fois, pour aujourd’hui et pour demain.
+        </p>
+        <a
+          href="https://simpli.events/e/cours-pour-la-vie"
+          class="button hero-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          S’inscrire
+        </a>
+      </div>
     </div>
   </header>
 
@@ -25,20 +41,56 @@
     <section class="card">
       <h2>À propos</h2>
       <p>
-        <strong>Cours pour la vie</strong> est un événement communautaire visant à promouvoir
-        la santé mentale, le bien-être et la solidarité.  
-        Ensemble, nous marchons et courons pour soutenir la vie, l’espoir et l’entraide.
+        <strong>Cours pour la vie</strong> est un événement communautaire qui vise à prévenir le suicide.
       </p>
     </section>
 
-    <section class="card">
+    <section class="card details-card">
       <h2>Détails de l’événement</h2>
-      <ul>
-        <li><strong>Date :</strong> 30 mai 2026, Départ à 9h00</li>
-        <li><strong>Lieu :</strong> À confirmer</li>
-        <li><strong>Distances :</strong> 5KM</li>
-        <li><strong>Public :</strong> Ouvert à tous</li>
-      </ul>
+      <div class="details-grid">
+        <div class="detail-box">
+          <span class="detail-label">Date</span>
+          <span class="detail-value">30 mai 2026</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Heure</span>
+          <span class="detail-value">Départ à 9h00</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Distance</span>
+          <span class="detail-value">7 km de course ou 2 km de marche en sentier</span>
+        </div>
+        <div class="detail-box">
+          <span class="detail-label">Public</span>
+          <span class="detail-value">Ouvert à tous</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Lieu</h2>
+      <p>
+        L’événement aura lieu au
+        <a
+          href="https://www.domainesaintbernard.org"
+          class="link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Domaine St-Bernard
+        </a>.
+      </p>
+      <p>
+        539, chemin Saint-Bernard<br />
+        Mont-Tremblant (Québec) J8E 1T4
+      </p>
+      <p>
+        <img
+          src="images/st-bernard_logo.png"
+          alt="Logo du Domaine St-Bernard"
+          style="max-width: 160px; width: 100%; height: auto; margin-top: 10px;"
+        />
+      </p>
     </section>
 
     <section class="card">
@@ -59,19 +111,26 @@
     </section>
 
     <section class="cta">
-      <h2>Envie de participer ?</h2>
+      <h2>Envie de participer&nbsp;?</h2>
       <p>Joignez-vous à nous et faites partie du mouvement.</p>
       <a
-        href="https://www.zeffy.com/en-CA/ticketing/cours-pour-la-vie"
+        href="https://simpli.events/e/cours-pour-la-vie"
         class="button"
         target="_blank"
         rel="noopener noreferrer"
-  >
-        S’inscrire
+      >
+        S’inscrire maintenant
       </a>
     </section>
 
   </main>
+
+  <!-- BANNIÈRE FIXE COMMANDITAIRES -->
+  <div class="fixed-sponsors-banner">
+    <a href="pages/commanditaires.html" class="fixed-sponsors-button">
+      Voir nos commanditaires
+    </a>
+  </div>
 
   <!-- FOOTER -->
   <footer>
