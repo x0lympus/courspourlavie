@@ -31,6 +31,26 @@ footer,
   text-align: center;
 }
 
+.fixed-registration-bubble {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  z-index: 1000;
+
+  background-color: #f9ff4d;
+  color: #4a2a00;
+
+  padding: 14px 22px;
+  border-radius: 999px;
+
+  font-weight: 800;
+  font-size: 1rem;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+}
+
 /* HERO */
 .hero {
   min-height: 78vh;
@@ -188,6 +208,15 @@ footer {
   padding: 2rem 1rem 2.5rem;
   color: var(--text-light);
   font-size: 0.95rem;
+}
+
+@media (max-width: 600px) {
+  .fixed-registration-bubble {
+    top: 14px;
+    right: 14px;
+    padding: 10px 16px;
+    font-size: 0.9rem;
+  }
 }
 
 /* RESPONSIVE */
